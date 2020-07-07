@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class CupboardController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public boolean isOpen;
 
-    // Update is called once per frame
-    void Update()
+void Update()
     {
-        
+       void openCupboard() // Player should trigger this when opening cupboard
+       {
+           boolean isOpen = true;
+       }
     }
 }
