@@ -27,5 +27,13 @@ public class CharacterController : MonoBehaviour
         {
             playerTransform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Carry");
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            animator.SetTrigger("Lob");
+        }
     }
 }
