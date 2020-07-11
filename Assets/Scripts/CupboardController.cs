@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CupboardController : MonoBehaviour
 {
-public boolean isOpen;
+public bool isOpen;
 
 void Update()
     {
        void openCupboard() // Player should trigger this when opening cupboard
        {
-           boolean isOpen = true;
+           bool isOpen = true;
        }
     }
 }
