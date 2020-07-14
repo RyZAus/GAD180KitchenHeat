@@ -832,7 +832,13 @@ MonoBehaviour:
   - {fileID: 2020975966}
   - {fileID: 78740972}
   - {fileID: 2056120182}
-  - {fileID: 2056120182}
+  - {fileID: 639057382}
+--- !u!4 &639057382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1779028894544876938, guid: af44ef29dbdbea94d86605a34bf320ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 111191405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &658697556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1779028894544876938, guid: af44ef29dbdbea94d86605a34bf320ed,
@@ -2031,6 +2037,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5598447825380084330, guid: b1d7b6cb2913bfe4d9b68cb39d7751b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8916483428453352233, guid: b1d7b6cb2913bfe4d9b68cb39d7751b3,
         type: 3}
       propertyPath: m_Name
