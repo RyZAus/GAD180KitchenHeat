@@ -9,11 +9,19 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnLocs;
     List<Transform> activeSpawnLocs = new List<Transform>();
     private int score;
+    private int ingredients = 2; // the number of ingredient to spawn on the first recipe
    
     // Start is called before the first frame update
     void Start()
     {
         int score = 0;
+
+    }
+
+    int NextLevel()
+    {
+        ingredients = ingredients++;
+        return ingredients;
     }
 
     // Update is called once per frame
@@ -44,6 +52,7 @@ public class GameManager : MonoBehaviour
     }
     int scoreUpdate()
     {
+        score = score++;
         return score;
     }
 
