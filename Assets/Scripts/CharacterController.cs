@@ -9,9 +9,12 @@ public class CharacterController : MonoBehaviour
     public float speed;
     public Animator animator;
     public Transform playerTransform;
-    //Our Update void for refresh per frame
+
+    
+
     void Update()
     {
+        
         //getting the input from the horizontal axis. times by speed. Storing in 'translation' float
         float translationHorizontal = Input.GetAxis("Horizontal") * speed;
         //set our animator
