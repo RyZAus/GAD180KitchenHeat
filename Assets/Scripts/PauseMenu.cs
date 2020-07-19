@@ -5,6 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using System.Runtime.InteropServices;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -12,12 +13,12 @@ public class PauseMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
+    public GameObject inGameUI;
+    
 
     // Update is called once per frame
     void Update()
-    {
-        
-        
+    {     
       if (Input.GetKeyDown(KeyCode.Escape))
       {
           Pause();
@@ -29,13 +30,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        inGameUI.SetActive(true);
+        print("The game is not paused");
     }
     public void Pause()
     {
         optionsMenuUI.SetActive(false);
         pauseMenuUI.SetActive(true);
+        inGameUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        print("The game is paused");
     }
     public void OptionMenu()
     {
