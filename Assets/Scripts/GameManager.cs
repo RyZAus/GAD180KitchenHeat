@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int score = 0;
-
+        score = 0;
+       
     }
 
     int NextLevel()
@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
       if (Input.GetKeyDown(KeyCode.Space))
         {
             RepopSpawnLocs(); //Fill our list with our locations
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         score = score++;
         return score;
     }
+    
 
    
 }
