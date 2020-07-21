@@ -292,4 +292,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   isOpen: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1779028894544876936}
