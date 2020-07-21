@@ -2212,6 +2212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687462872}
   - component: {fileID: 687462873}
+  - component: {fileID: 687462874}
   m_Layer: 0
   m_Name: WallPaper (2)
   m_TagString: Untagged
@@ -2283,6 +2284,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &687462874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687462871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ef402b740ccb1942937129de1ddebce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &698434573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2898,6 +2918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918863937}
   - component: {fileID: 918863936}
+  - component: {fileID: 918863938}
   m_Layer: 0
   m_Name: WallPaper (1)
   m_TagString: Untagged
@@ -2969,6 +2990,25 @@ Transform:
   m_Father: {fileID: 489785432}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &918863938
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918863935}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ef402b740ccb1942937129de1ddebce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &983057312
 PrefabInstance:
   m_ObjectHideFlags: 0
