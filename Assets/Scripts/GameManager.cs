@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject optionsMenuUI;
     public GameObject inGameUI;
     public GameObject gameOverScreen;
+    public GameObject welcomeMessage;
     private int ingredients = 2; // the number of ingredient to spawn on the first recipe
    
     // Start is called before the first frame update
@@ -62,7 +63,11 @@ public class GameManager : MonoBehaviour
             gameOverScreen.SetActive(true);
             resultsText.text = "You finished with a score of " + score;
         }
-    }
+        if (timer < 295)
+		{
+            welcomeMessage.SetActive(false);
+		}
+               }
      public void RepopSpawnLocs()
     {
         for(int i = 0; i < spawnLocs.Length; i++)
