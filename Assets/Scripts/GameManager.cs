@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             Pause();
         }
         scoreText.text = "Score: " + score;
-        timerText.text = "Time: " + timer;
+        timerText.text = "Time: " + timer.ToString("0.00");
         if (Input.GetKeyDown(KeyCode.Space))
       {
             RepopSpawnLocs(); //Fill our list with our locations
