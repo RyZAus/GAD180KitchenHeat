@@ -5800,7 +5800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562bf36ac5e77fd4e892d4bba0d6f556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
 --- !u!114 &2083360802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5942,7 +5941,7 @@ PrefabInstance:
     - target: {fileID: 4667063458849300226, guid: b1d7b6cb2913bfe4d9b68cb39d7751b3,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5598447825380084330, guid: b1d7b6cb2913bfe4d9b68cb39d7751b3,
         type: 3}
