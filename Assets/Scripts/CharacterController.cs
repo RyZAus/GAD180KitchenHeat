@@ -13,11 +13,12 @@ public class CharacterController : MonoBehaviour
     public float translationHorizontal;
 
 
+    
 
 
     void Update()
     {
-
+        
         //Call the bounds setter
       
         //getting the input from the horizontal axis. times by speed. Storing in 'translation' float
