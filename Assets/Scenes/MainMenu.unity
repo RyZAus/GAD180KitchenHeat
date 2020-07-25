@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smokeCloud: {fileID: 59270753}
-  respawnTime: 1
+  respawnTime: 0.5
   killTime: 4
 --- !u!212 &349947442
 SpriteRenderer:
