@@ -9,7 +9,9 @@ public class CharacterController : MonoBehaviour
     public float speed = 8;
     public Animator animator;
     public Transform playerTransform;
-
+    //Test Code
+    public GameObject Character;
+    //Test Code
     public float translationHorizontal;
 
 
@@ -48,10 +50,11 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Carry");
+            //if (in trigger)
+            {
+                //Transform the first object to be the child of the second
+                //object1.transform.parent = Character.transform
+            }
         }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            animator.SetTrigger("Lob");
-        }    
     }
 }
