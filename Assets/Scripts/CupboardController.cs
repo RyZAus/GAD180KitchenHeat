@@ -5,36 +5,24 @@ using UnityEngine.Events;
 
 public class CupboardController : MonoBehaviour
 {
-    public float speed;
-    public bool isOpen;
+    public bool isOpen = false;
     public Animator animator;
+   
 
-    void openCupboard() // Player should trigger this when opening cupboard
+    void FixedUpdate()
     {
-        bool isOpen = true;
-    }
-
-    void Update()
-    {
-       if (Input.GetKeyDown(KeyCode.C)) //Code is broken still needs to be fixed Animator needs to be referenced
-       {
-           animator.SetTrigger("CupboardTrigger");
-           openCupboard();
-       }        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {        
-        if (other.tag == "Player")
-        {            
-            animator.SetTrigger("CupboardTrigger");
-            openCupboard();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            isOpen = !isOpen;
+            animator.SetBool("CupboardTrigger", isOpen);
         }
+               
     }
-    private void OnTriggerExit(Collider collider)
-    {
-        animator.SetTrigger("CupboardTrigger");
-        openCupboard();
-    }
+
+
+
+
+
+
 
 }
