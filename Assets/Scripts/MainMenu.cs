@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject optionMenu;
     public GameObject tutorialMenu;
+    public GameObject controlButtons;
 
     public void PlayGame()
     {
@@ -26,7 +27,6 @@ public class MainMenu : MonoBehaviour
     }
     public void SetVolume(float volume)
     {
-        print("The current volume is " + volume);
         audioMixer.SetFloat("volume", volume);
     }
     public void ReturnMenu()
@@ -34,18 +34,21 @@ public class MainMenu : MonoBehaviour
         mainMenu.gameObject.SetActive(true);
         optionMenu.gameObject.SetActive(false);
         tutorialMenu.gameObject.SetActive(false);
+        controlButtons.gameObject.SetActive(false);
     }
     public void OptionScreen()
     {
         mainMenu.gameObject.SetActive(false);
         optionMenu.gameObject.SetActive(true);
         tutorialMenu.gameObject.SetActive(false);
+        controlButtons.gameObject.SetActive(true);
     }
     public void HowToPlay()
     {
         mainMenu.gameObject.SetActive(false);
         optionMenu.gameObject.SetActive(false);
         tutorialMenu.gameObject.SetActive(true);
+        controlButtons.gameObject.SetActive(false);
     }
 }
 

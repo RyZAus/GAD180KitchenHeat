@@ -26,7 +26,6 @@ public class Controller : MonoBehaviour
     private void FixedUpdate()
     {
         float move = Input.GetAxis("Horizontal");
-        Debug.Log(Input.GetAxis("Horizontal"));
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
         //if the input is moving the player to the right but they are facing left...
