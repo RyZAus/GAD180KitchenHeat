@@ -62,8 +62,7 @@ public class Controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            animator.SetTrigger("Carry");
+            
             //function to pick up item
             if (!grabbed)
             {
@@ -74,6 +73,8 @@ public class Controller : MonoBehaviour
                 if (hit.collider != null && hit.collider.tag == "Ingredient")
                 {
                     grabbed = true;
+                    //switch character animation to carry position
+                    animator.SetTrigger("Carry");
 
                 }
 
@@ -85,7 +86,8 @@ public class Controller : MonoBehaviour
 
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null)
                 {
-
+                    //switch character animation to carry position
+                    animator.SetTrigger("Carry");
                     hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 1) * throwforce;
                 }
 

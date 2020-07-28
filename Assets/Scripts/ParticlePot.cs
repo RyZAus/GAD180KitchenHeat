@@ -19,6 +19,7 @@ public class ParticlePot : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Ingredient"))
 		{
+			Destroy(other.gameObject);
 			Collect();
 		}
 	}

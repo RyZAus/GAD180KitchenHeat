@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
         scoreText.text = "Score: " + score;
         timerText.text = "Time: " + timer.ToString("0.00");
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
       {
             RepopSpawnLocs(); //Fill our list with our locations
             RandomSpawn(); //Spawn objects and delete each location from the list  
