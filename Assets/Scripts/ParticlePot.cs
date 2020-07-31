@@ -8,12 +8,16 @@ public class ParticlePot : MonoBehaviour
 	[SerializeField] ParticleSystem particleSystem = null;
 
 	public GameManager gameManager;
-	
+	public GameObject ingredient1;
+	public GameObject ingredient2;
+	public GameObject ingredient3;
+	public GameObject ingredient4;
+
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.P))
 		{
-			Collect();
+			IngredientIn();
 		}
 	}
 
@@ -22,11 +26,10 @@ public class ParticlePot : MonoBehaviour
 		if (other.gameObject.CompareTag("Ingredient"))
 		{
 			Destroy(other.gameObject);
-			Collect();
+			IngredientIn();
 		}
 	}
-
-	public void Collect()
+	public void IngredientIn()
 	{
 		particleSystem.Play();
 		gameManager.scoreUpdate();

@@ -6,8 +6,19 @@ TagManager:
   tags:
   - Ingredient
   - Cupboard
-  - Left Border
-  - Right Border
+  - Apple
+  - Avocado
+  - Banana
+  - Carrot
+  - Chicken
+  - Cucumber
+  - Fish
+  - Onion
+  - Potato
+  - Pumpkin
+  - Steak
+  - Tomato
+  - Turnip
   layers:
   - Default
   - TransparentFX

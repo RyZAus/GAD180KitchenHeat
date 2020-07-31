@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject welcomeMessage;
     private int ingredients = 2; // the number of ingredient to spawn on the first recipe
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,18 +49,29 @@ public class GameManager : MonoBehaviour
     {
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
 
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
+            for (int i = 0; i < ingredients.Length; i++)
+            {
+                Destroy(ingredients[i]);
+            }
+            RepopSpawnLocs();
+            RandomSpawn();
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
         scoreText.text = "Score: " + score.ToString();
-        
+
         timerText.text = "Time: " + timer.ToString("0.00");
         if (Input.GetKeyDown(KeyCode.Q))
-      {
+        {
             RepopSpawnLocs(); //Fill our list with our locations
             RandomSpawn(); //Spawn objects and delete each location from the list  
-      }
+        }
         timer = timer - Time.deltaTime;
         if (timer < 0)
         {
@@ -69,20 +80,20 @@ public class GameManager : MonoBehaviour
             resultsText.text = "You finished with a score of " + score;
         }
         if (timer < 295)
-		{
+        {
             welcomeMessage.SetActive(false);
-		}
-               }
-     public void RepopSpawnLocs()
+        }
+    }
+    public void RepopSpawnLocs()
     {
-        for(int i = 0; i < spawnLocs.Length; i++)
+        for (int i = 0; i < spawnLocs.Length; i++)
         {
             activeSpawnLocs.Add(spawnLocs[i]); //adding array item, to a list
         }
     }
     public void RandomSpawn()
     {
-        for(int i = 0; i < ingredientsToSpawn.Length; i++)
+        for (int i = 0; i < ingredientsToSpawn.Length; i++)
         {
             //use our list here
             int x = Random.Range(0, activeSpawnLocs.Count);
@@ -90,6 +101,12 @@ public class GameManager : MonoBehaviour
             activeSpawnLocs.RemoveAt(x);
         }
     }
+
+    public void RemoveIngredients()
+    {
+        
+    }
+            
     public void scoreUpdate()
     {
         score = score + 1;
