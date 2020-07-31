@@ -7,6 +7,8 @@ public class ParticlePot : MonoBehaviour
 {
 	[SerializeField] ParticleSystem particleSystem = null;
 
+	public GameManager gameManager;
+	
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.P))
@@ -27,5 +29,6 @@ public class ParticlePot : MonoBehaviour
 	public void Collect()
 	{
 		particleSystem.Play();
+		gameManager.scoreUpdate();
 	}
 }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text timerText;
     public Text resultsText;
+    public Text highScoreText;
     public bool GameIsPaused = false;
     public AudioMixer audioMixer;
     public GameObject pauseMenuUI;
@@ -33,7 +34,8 @@ public class GameManager : MonoBehaviour
         timer = 300;
         scoreText.text = "Score: " + score;
         timerText.text = "Time: " + timer;
-       
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+
     }
 
     int NextLevel()
@@ -45,11 +47,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score.ToString();
+        
         timerText.text = "Time: " + timer.ToString("0.00");
         if (Input.GetKeyDown(KeyCode.Q))
       {
@@ -85,11 +90,21 @@ public class GameManager : MonoBehaviour
             activeSpawnLocs.RemoveAt(x);
         }
     }
-    int scoreUpdate()
+    public void scoreUpdate()
     {
-        score = score++;
-        return score;
+        score = score + 1;
+        if (score > PlayerPrefs.GetInt("HighScore",0))
+		{
+            PlayerPrefs.SetInt("HighScore", score);
+            highScoreText.text = score.ToString();
+		}
+        
     }
+
+    public void HighScoreReset()
+	{
+        PlayerPrefs.DeleteKey("HighScore");
+	}
 
     public void Resume()
     {
