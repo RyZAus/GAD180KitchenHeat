@@ -10469,6 +10469,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 7134362783409731104, guid: c7dec38e285a8bb4e86eaa7d685f89ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7134362783409731134, guid: c7dec38e285a8bb4e86eaa7d685f89ef,
         type: 3}
       propertyPath: m_BackGroundColor.r
@@ -10584,6 +10589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134362783627421516, guid: c7dec38e285a8bb4e86eaa7d685f89ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7dec38e285a8bb4e86eaa7d685f89ef, type: 3}

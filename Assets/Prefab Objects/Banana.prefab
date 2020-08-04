@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1738261249220631755}
   - component: {fileID: 1149019354787819080}
   - component: {fileID: 4440634240740331018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Banana
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4f49c7dd765ddd54ab2d9ce9f0a4f44b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

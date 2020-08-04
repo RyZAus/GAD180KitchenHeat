@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4985337141479725037}
   - component: {fileID: -6519268436776555416}
   - component: {fileID: -2940088363298854432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Potato
   m_TagString: Ingredient
   m_Icon: {fileID: 0}

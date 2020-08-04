@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7939883060231907221}
   - component: {fileID: -8501435704469368128}
   - component: {fileID: 5583775841677744999}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Avocado
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
