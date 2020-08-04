@@ -15,21 +15,24 @@ public class CupboardController : MonoBehaviour
         {
             isOpen = !isOpen;
             animator.SetBool("CupboardTriggerBool", isOpen);
-        }
-               
+        }               
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log ("Trigger Enter");
         if (other.tag == "Player")
         {
+            Debug.Log("Player Enter");
             animator.SetTrigger("CupboardTrigger");
         }
     }
     private void OnTriggerExit(Collider collider)
     {
+        Debug.Log("Trigger Exit");
         if (collider.tag == "Player")
-        {
+        {            
+            Debug.Log("Player Exit");
             animator.SetTrigger("CupboardTrigger");
         }            
     }
