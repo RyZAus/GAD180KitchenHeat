@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 71903447506170202}
   - component: {fileID: -4728907215741409560}
   - component: {fileID: 7948794088849001211}
+  - component: {fileID: 2762334788143369043}
   m_Layer: 10
   m_Name: Carrot
   m_TagString: Ingredient
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2762334788143369043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164030802245529720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6fffd93fc58e84385d59058ae12819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisIngredient: 3

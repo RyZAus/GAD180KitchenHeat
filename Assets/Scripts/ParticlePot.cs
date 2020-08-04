@@ -17,7 +17,7 @@ public class ParticlePot : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.P))
 		{
-			IngredientIn();
+			//IngredientIn();
 		}
 	}
 
@@ -26,12 +26,13 @@ public class ParticlePot : MonoBehaviour
 		if (other.gameObject.CompareTag("Ingredient"))
 		{
 			Destroy(other.gameObject);
-			IngredientIn();
+			IngredientIn(other.gameObject);
 		}
 	}
-	public void IngredientIn()
+	public void IngredientIn(GameObject ingredient)
 	{
 		particleSystem.Play();
+		gameManager.RemoveIngredients(ingredient);
 		gameManager.scoreUpdate();
 	}
 }

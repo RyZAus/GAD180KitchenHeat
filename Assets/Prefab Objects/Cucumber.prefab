@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3280344198498407101}
   - component: {fileID: -1140904679440125204}
   - component: {fileID: -6481692437283924514}
+  - component: {fileID: 3066757820187777628}
   m_Layer: 10
   m_Name: Cucumber
   m_TagString: Ingredient
@@ -130,3 +131,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3066757820187777628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231987861218840051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6fffd93fc58e84385d59058ae12819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisIngredient: 5

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4208338395305683203}
   - component: {fileID: -7734163311899927893}
   - component: {fileID: -2631876757179757136}
+  - component: {fileID: -1048952730984944546}
   m_Layer: 10
   m_Name: Fish
   m_TagString: Ingredient
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1048952730984944546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711055524687253983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6fffd93fc58e84385d59058ae12819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisIngredient: 6

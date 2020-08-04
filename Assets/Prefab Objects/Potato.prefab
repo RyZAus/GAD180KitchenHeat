@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4985337141479725037}
   - component: {fileID: -6519268436776555416}
   - component: {fileID: -2940088363298854432}
+  - component: {fileID: 5063080825106559754}
   m_Layer: 10
   m_Name: Potato
   m_TagString: Ingredient
@@ -130,3 +131,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5063080825106559754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243141298146327213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6fffd93fc58e84385d59058ae12819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisIngredient: 8

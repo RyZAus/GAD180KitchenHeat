@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject welcomeMessage;
     private int ingredients = 2; // the number of ingredient to spawn on the first recipe
+    public List<GameObject> recipe = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +36,41 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         timerText.text = "Time: " + timer;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+        CreateRecipe();
 
     }
 
-    int NextLevel()
+    void CreateRecipe()
     {
-        ingredients = ingredients++;
-        return ingredients;
+        int w = Random.Range(0,3);
+        int x = Random.Range(3,7);
+        int y = Random.Range(7,10);
+        int z = Random.Range(10,13);
+
+        recipe.Add(ingredientsToSpawn[w]);
+        recipe.Add(ingredientsToSpawn[x]);
+        recipe.Add(ingredientsToSpawn[y]);
+        recipe.Add(ingredientsToSpawn[z]);
     }
 
+    public void RemoveIngredients(GameObject ingredient)
+    {
+        if (recipe.Count != 0)
+        {
+            foreach (GameObject go in recipe)
+            {
+                if (go.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
+                {
+                    recipe.Remove(go);
+                }
+            }
+        }
+        if (recipe.Count == 0)
+		{
+            CreateRecipe();
+		}
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -102,10 +129,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RemoveIngredients()
-    {
-        
-    }
+   
             
     public void scoreUpdate()
     {
