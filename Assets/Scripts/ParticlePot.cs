@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security;
 using UnityEngine;
@@ -31,8 +31,8 @@ public class ParticlePot : MonoBehaviour
 	}
 	public void IngredientIn(GameObject ingredient)
 	{
-		particleSystem.Play();
+		//moved particle system to GameManager
 		gameManager.RemoveIngredients(ingredient);
-		gameManager.scoreUpdate();
+		
 	}
 }
