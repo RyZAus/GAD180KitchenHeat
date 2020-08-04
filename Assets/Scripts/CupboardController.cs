@@ -18,7 +18,7 @@ public class CupboardController : MonoBehaviour
         }               
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log ("Trigger Enter");
         if (other.tag == "Player")
@@ -27,7 +27,7 @@ public class CupboardController : MonoBehaviour
             animator.SetTrigger("CupboardTrigger");
         }
     }
-    private void OnTriggerExit(Collider collider)
+    private void OnTriggerExit2D(Collider2D collider)
     {
         Debug.Log("Trigger Exit");
         if (collider.tag == "Player")
