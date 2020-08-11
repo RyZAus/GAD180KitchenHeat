@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] ingredientsToSpawn;
     public Transform[] spawnLocs;
+    public Sprite[] spriteArray;
     List<Transform> activeSpawnLocs = new List<Transform>();
     public int score;
     public float timer;
@@ -29,7 +30,10 @@ public class GameManager : MonoBehaviour
     private int ingredients = 2; // the number of ingredient to spawn on the first recipe
     public List<GameObject> recipe = new List<GameObject>();
     public int multiplier = 1;
-
+    SpriteRenderer object1Renderer;
+    SpriteRenderer object2Renderer;
+    SpriteRenderer object3Renderer;
+    SpriteRenderer object4Renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +44,10 @@ public class GameManager : MonoBehaviour
         timerText.text = "Time: " + timer;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
         CreateRecipe();
-
+        object1Renderer = GameObject.Find("Ingredient Space 1").GetComponent<SpriteRenderer>();
+        object2Renderer = GameObject.Find("Ingredient Space 2").GetComponent<SpriteRenderer>();
+        object3Renderer = GameObject.Find("Ingredient Space 3").GetComponent<SpriteRenderer>();
+        object4Renderer = GameObject.Find("Ingredient Space 4").GetComponent<SpriteRenderer>();
     }
 
     void CreateRecipe()
@@ -49,11 +56,14 @@ public class GameManager : MonoBehaviour
         int x = Random.Range(3,7);
         int y = Random.Range(7,10);
         int z = Random.Range(10,13);
-
         recipe.Add(ingredientsToSpawn[w]);
         recipe.Add(ingredientsToSpawn[x]);
         recipe.Add(ingredientsToSpawn[y]);
         recipe.Add(ingredientsToSpawn[z]);
+        object1Renderer.sprite = spriteArray[w];
+        object2Renderer.sprite = spriteArray[x];
+        object3Renderer.sprite = spriteArray[y];
+        object4Renderer.sprite = spriteArray[z];
     }
 
     public void RemoveIngredients(GameObject ingredient)

@@ -20,19 +20,15 @@ public class CupboardController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log ("Trigger Enter");
         if (other.tag == "Player")
         {
-            Debug.Log("Player Enter");
             animator.SetTrigger("CupboardTrigger");
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("Trigger Exit");
         if (collider.tag == "Player")
         {            
-            Debug.Log("Player Exit");
             animator.SetTrigger("CupboardTrigger");
         }            
     }
