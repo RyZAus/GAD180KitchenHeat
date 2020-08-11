@@ -8,6 +8,7 @@ using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] ParticleSystem particleSystem = null;
 
     public GameObject[] ingredientsToSpawn;
     public Transform[] spawnLocs;
@@ -62,9 +63,9 @@ public class GameManager : MonoBehaviour
             {
                 if (go.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
                 {
-                   // recipe.Remove(go);
-                   //particleSystem.Play();
-                    scoreUpdate();
+                   recipe.Remove(go);
+                    particleSystem.Play();
+                   scoreUpdate();
                 }
             }
         }
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
         if (recipe.Count == 0)
         {
             CreateRecipe();
+            //provides additional point for completing a recipe > this can be replaced if needed once we figure out what will happen with score bonuses
+            scoreUpdate();
             GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
             for (int i = 0; i < ingredients.Length; i++)
             {

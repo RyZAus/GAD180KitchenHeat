@@ -1478,7 +1478,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -7.2, y: -0.0027160645}
-  m_SizeDelta: {x: -0.000061035156, y: -0.00390625}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593788796
 MonoBehaviour:
@@ -1779,7 +1779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597880665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.80574, y: 246.38089, z: -0.00000023966035}
+  m_LocalPosition: {x: 146.772, y: 246.533, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1676452601}
@@ -2135,6 +2135,7 @@ MonoBehaviour:
   inGameUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
   welcomeMessage: {fileID: 0}
+  recipe: []
 --- !u!4 &1028453225
 Transform:
   m_ObjectHideFlags: 0
@@ -2676,7 +2677,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -8445,6 +8446,7 @@ MonoBehaviour:
   inGameUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
   welcomeMessage: {fileID: 0}
+  recipe: []
 --- !u!1 &1682035162
 GameObject:
   m_ObjectHideFlags: 0
@@ -8618,7 +8620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1694900540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8864,6 +8866,7 @@ MonoBehaviour:
   inGameUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
   welcomeMessage: {fileID: 0}
+  recipe: []
 --- !u!1 &1808943433
 GameObject:
   m_ObjectHideFlags: 0

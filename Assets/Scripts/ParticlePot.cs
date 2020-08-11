@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ParticlePot : MonoBehaviour
 {
-	[SerializeField] ParticleSystem particleSystem = null;
-
 	public GameManager gameManager;
 	public GameObject ingredient1;
 	public GameObject ingredient2;
