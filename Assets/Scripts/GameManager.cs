@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public Text highScoreText;
     public bool GameIsPaused = false;
     public AudioMixer audioMixer;
+    public AudioSource goodIngredient;
+    public AudioSource badIngredient;
+    public AudioSource gameFinished;
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject inGameUI;
@@ -95,8 +98,8 @@ public class GameManager : MonoBehaviour
                         particleSystem.Play();
                         scoreUpdate();
                         multiplierUpdate();
-                        //good ingredient audio clip
-                        
+                        //good ingredient audio
+                        goodIngredient.Play();
                     }
 
                 }
@@ -107,6 +110,7 @@ public class GameManager : MonoBehaviour
             badparticles.Play();
             multiplier = 1;
             //bad ingredient audio clip
+            badIngredient.Play();
 		}
     }
     public void CheckScoreUpdate(GameObject ingredient)
@@ -166,6 +170,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             gameOverScreen.SetActive(true);
             resultsText.text = "You finished with a score of " + score;
+            //add in game finished audio
+            gameFinished.Play();
         }
         if (timer < 295)
         {
