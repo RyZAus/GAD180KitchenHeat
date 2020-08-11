@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         timerText.text = "Time: " + timer;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
         CreateRecipe();
+        particleSystem.Stop();
+        badparticles.Stop();
         object1Renderer = GameObject.Find("Ingredient Space 1").GetComponent<SpriteRenderer>();
         object2Renderer = GameObject.Find("Ingredient Space 2").GetComponent<SpriteRenderer>();
         object3Renderer = GameObject.Find("Ingredient Space 3").GetComponent<SpriteRenderer>();
