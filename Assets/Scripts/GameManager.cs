@@ -9,6 +9,7 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] ParticleSystem particleSystem = null;
+    [SerializeField] ParticleSystem badparticles = null;
 
     public GameObject[] ingredientsToSpawn;
     public Transform[] spawnLocs;
@@ -92,7 +93,8 @@ public class GameManager : MonoBehaviour
                         particleSystem.Play();
                         scoreUpdate();
                         multiplierUpdate();
-
+                        //good ingredient audio clip
+                        
                     }
 
                 }
@@ -100,8 +102,9 @@ public class GameManager : MonoBehaviour
         }
         else
 		{
-            //extra bad stuff goes here
+            badparticles.Play();
             multiplier = 1;
+            //bad ingredient audio clip
 		}
     }
     public void CheckScoreUpdate(GameObject ingredient)
