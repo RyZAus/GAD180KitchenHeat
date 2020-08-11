@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using System.Net;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,10 +23,13 @@ public class GameManager : MonoBehaviour
     public Text resultsText;
     public Text highScoreText;
     public bool GameIsPaused = false;
+
     public AudioMixer audioMixer;
+    public AudioSource gameMusic;
+    public AudioSource gameOverClip;
     public AudioSource goodIngredient;
     public AudioSource badIngredient;
-    public AudioSource gameFinished;
+    
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
     public GameObject inGameUI;
@@ -111,7 +115,8 @@ public class GameManager : MonoBehaviour
             multiplier = 1;
             //bad ingredient audio clip
             badIngredient.Play();
-		}
+
+        }
     }
     public void CheckScoreUpdate(GameObject ingredient)
     {
@@ -167,16 +172,24 @@ public class GameManager : MonoBehaviour
         timer = timer - Time.deltaTime;
         if (timer < 0)
         {
-            Time.timeScale = 0f;
+            timer = 0;
+            timerText.text = "";
             gameOverScreen.SetActive(true);
             resultsText.text = "You finished with a score of " + score;
-            //add in game finished audio
-            gameFinished.Play();
+            Time.timeScale = 0f;
+            GameOverState();
         }
-        if (timer < 295)
+        if (timer < 85)
         {
             welcomeMessage.SetActive(false);
         }
+    }
+
+    public void GameOverState()
+	{
+        gameMusic.Stop();
+        //gameover clip to play
+        gameOverClip.Play();
     }
     public void RepopSpawnLocs()
     {
