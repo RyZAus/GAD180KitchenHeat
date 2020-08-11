@@ -4,15 +4,28 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
+    public Text highScoreText;
     public GameObject mainMenu;
     public GameObject optionMenu;
     public GameObject tutorialMenu;
     public GameObject controlButtons;
+    
+
+    void Update()
+	{
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
+
+    public void HighScoreReset()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
+    }
 
     public void PlayGame()
     {

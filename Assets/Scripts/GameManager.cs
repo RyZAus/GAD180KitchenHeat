@@ -28,13 +28,14 @@ public class GameManager : MonoBehaviour
     public GameObject welcomeMessage;
     private int ingredients = 2; // the number of ingredient to spawn on the first recipe
     public List<GameObject> recipe = new List<GameObject>();
+    public int multiplier = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        timer = 300;
+        timer = 90;
         scoreText.text = "Score: " + score;
         timerText.text = "Time: " + timer;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
@@ -57,18 +58,40 @@ public class GameManager : MonoBehaviour
 
     public void RemoveIngredients(GameObject ingredient)
     {
-        if (recipe.Count != 0)
+        bool wasFound = false;
+
+        foreach(GameObject i in recipe)
+		{
+            if (i.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
+			{
+                wasFound = true;
+			}
+
+        }
+
+        if (wasFound)
         {
-            foreach (GameObject go in recipe)
+            if (recipe.Count != 0)
             {
-                if (go.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
+                foreach (GameObject go in recipe)
                 {
-                   recipe.Remove(go);
-                   particleSystem.Play();
-                   scoreUpdate();
+                    if (go.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
+                    {
+                        recipe.Remove(go);
+                        particleSystem.Play();
+                        scoreUpdate();
+                        multiplierUpdate();
+
+                    }
+
                 }
             }
         }
+        else
+		{
+            //extra bad stuff goes here
+            multiplier = 1;
+		}
     }
     public void CheckScoreUpdate(GameObject ingredient)
     {
@@ -150,7 +173,7 @@ public class GameManager : MonoBehaviour
             
     public void scoreUpdate()
     {
-        score = score + 1;
+        score = score + (25 * multiplier);
         if (score > PlayerPrefs.GetInt("HighScore",0))
 		{
             PlayerPrefs.SetInt("HighScore", score);
@@ -159,15 +182,14 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void multiplierUpdate()
+	{
+        multiplier = multiplier + 1;
+	}
+
     public void scoreUpdateMinus()
     {
         score = score - 1;
-        if (score > PlayerPrefs.GetInt("HighScore", 0))
-        {
-            PlayerPrefs.SetInt("HighScore", score);
-            highScoreText.text = score.ToString();
-        }
-
     }
 
     public void HighScoreReset()

@@ -523,7 +523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1028453224}
+      - m_Target: {fileID: 1838287444}
         m_MethodName: HighScoreReset
         m_Mode: 1
         m_Arguments:
@@ -2091,65 +2091,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015958252}
   m_CullTransparentMesh: 0
---- !u!1 &1028453223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1028453225}
-  - component: {fileID: 1028453224}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1028453224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028453223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366fc7b75555d664f88d1977328451a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredientsToSpawn: []
-  spawnLocs: []
-  score: 0
-  timer: 0
-  scoreText: {fileID: 0}
-  timerText: {fileID: 0}
-  resultsText: {fileID: 0}
-  highScoreText: {fileID: 1179325645}
-  GameIsPaused: 0
-  audioMixer: {fileID: 0}
-  pauseMenuUI: {fileID: 0}
-  optionsMenuUI: {fileID: 0}
-  inGameUI: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  welcomeMessage: {fileID: 0}
-  recipe: []
---- !u!4 &1028453225
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028453223}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 181.9241, y: 63.695816, z: -30.624435}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092681664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2259,7 @@ GameObject:
   - component: {fileID: 1179325646}
   - component: {fileID: 1179325645}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HighScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2677,7 +2618,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -8431,6 +8372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366fc7b75555d664f88d1977328451a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particleSystem: {fileID: 0}
   ingredientsToSpawn: []
   spawnLocs: []
   score: 0
@@ -8447,6 +8389,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   welcomeMessage: {fileID: 0}
   recipe: []
+  multiplier: 1
 --- !u!1 &1682035162
 GameObject:
   m_ObjectHideFlags: 0
@@ -8806,7 +8749,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758575477}
-  - component: {fileID: 1758575478}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -8839,34 +8781,6 @@ RectTransform:
   m_AnchoredPosition: {x: -26, y: -152}
   m_SizeDelta: {x: 817.4658, y: 945.56775}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1758575478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758575476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 366fc7b75555d664f88d1977328451a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredientsToSpawn: []
-  spawnLocs: []
-  score: 0
-  timer: 0
-  scoreText: {fileID: 0}
-  timerText: {fileID: 0}
-  resultsText: {fileID: 0}
-  highScoreText: {fileID: 0}
-  GameIsPaused: 0
-  audioMixer: {fileID: 0}
-  pauseMenuUI: {fileID: 0}
-  optionsMenuUI: {fileID: 0}
-  inGameUI: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  welcomeMessage: {fileID: 0}
-  recipe: []
 --- !u!1 &1808943433
 GameObject:
   m_ObjectHideFlags: 0
@@ -9112,6 +9026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 33264e31e28dc0846a0f4e406d77d506, type: 2}
+  highScoreText: {fileID: 1179325645}
   mainMenu: {fileID: 1758575476}
   optionMenu: {fileID: 429565568}
   tutorialMenu: {fileID: 1752880245}
