@@ -64,11 +64,15 @@ public class GameManager : MonoBehaviour
                 if (go.GetComponent<Ingredient>().thisIngredient == ingredient.GetComponent<Ingredient>().thisIngredient)
                 {
                    recipe.Remove(go);
-                    particleSystem.Play();
+                   particleSystem.Play();
                    scoreUpdate();
                 }
             }
         }
+    }
+    public void CheckScoreUpdate(GameObject ingredient)
+    {
+        
     }
     
     // Update is called once per frame
