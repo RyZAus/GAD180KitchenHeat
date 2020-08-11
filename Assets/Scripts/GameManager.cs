@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if statement to identify which of the ingredients is being removed to then set eg. object1Renderer.sprite = spriteArray[13] which will set the sprite to clear
         object1Renderer.sprite = spriteArray[ing1];
         object2Renderer.sprite = spriteArray[ing2];
         object3Renderer.sprite = spriteArray[ing3];

@@ -8059,6 +8059,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 90c536c5d24070f41b4201693f616720, type: 3}
   - {fileID: 21300000, guid: b75f479f533cc704db04974e8c1fbad9, type: 3}
   - {fileID: 21300000, guid: 6faf4bb6a9e0ceb489997010174f469c, type: 3}
+  - {fileID: 21300000, guid: 60dc92a00cda7c646bd81970d70ef56a, type: 3}
   score: 0
   timer: 0
   scoreText: {fileID: 423134911}
