@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour
     SpriteRenderer object2Renderer;
     SpriteRenderer object3Renderer;
     SpriteRenderer object4Renderer;
+    int ing1 = 0;
+    int ing2 = 0;
+    int ing3 = 0;
+    int ing4 = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -52,18 +56,15 @@ public class GameManager : MonoBehaviour
 
     void CreateRecipe()
     {
-        int w = Random.Range(0,3);
-        int x = Random.Range(3,7);
-        int y = Random.Range(7,10);
-        int z = Random.Range(10,13);
-        recipe.Add(ingredientsToSpawn[w]);
-        recipe.Add(ingredientsToSpawn[x]);
-        recipe.Add(ingredientsToSpawn[y]);
-        recipe.Add(ingredientsToSpawn[z]);
-        object1Renderer.sprite = spriteArray[w];
-        object2Renderer.sprite = spriteArray[x];
-        object3Renderer.sprite = spriteArray[y];
-        object4Renderer.sprite = spriteArray[z];
+        ing1 = Random.Range(0,3);
+        ing2 = Random.Range(3,7);
+        ing3 = Random.Range(7,10);
+        ing4 = Random.Range(10,13);
+        recipe.Add(ingredientsToSpawn[ing1]);
+        recipe.Add(ingredientsToSpawn[ing2]);
+        recipe.Add(ingredientsToSpawn[ing3]);
+        recipe.Add(ingredientsToSpawn[ing4]);
+        
     }
 
     public void RemoveIngredients(GameObject ingredient)
@@ -111,6 +112,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        object1Renderer.sprite = spriteArray[ing1];
+        object2Renderer.sprite = spriteArray[ing2];
+        object3Renderer.sprite = spriteArray[ing3];
+        object4Renderer.sprite = spriteArray[ing4];
         if (recipe.Count == 0)
         {
             CreateRecipe();

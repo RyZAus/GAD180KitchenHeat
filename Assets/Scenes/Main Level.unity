@@ -8018,6 +8018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleSystem: {fileID: 1115842026}
   ingredientsToSpawn:
+  - {fileID: 6866407787361127782, guid: 28e586d247ff89a4b88f4c7858aadd88, type: 3}
   - {fileID: 6115544204862283189, guid: 9578ce018589bc94a91c550cfefc4ea4, type: 3}
   - {fileID: 7635049472194693791, guid: d7bfeeabc97bdd4429de9a1120848280, type: 3}
   - {fileID: 8164030802245529720, guid: c1ac2f19f4e584c459202d74dd22ac1b, type: 3}
@@ -8030,7 +8031,6 @@ MonoBehaviour:
   - {fileID: 9142060482493311466, guid: 46e7557c07155214998aa2387d050ca0, type: 3}
   - {fileID: 5581230391082229767, guid: c15da91fb3d3d6e40a4ce4f0382d991e, type: 3}
   - {fileID: 5953646336347457923, guid: 3338f72e20589214d9ef49d6c0345233, type: 3}
-  - {fileID: 6866407787361127782, guid: 28e586d247ff89a4b88f4c7858aadd88, type: 3}
   spawnLocs:
   - {fileID: 1779028894506933196}
   - {fileID: 1779028894135262631}
