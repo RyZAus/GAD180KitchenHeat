@@ -126,6 +126,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //DEVELOPER TOOLS TO REMOVE LATER
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
+            for (int i = 0; i < ingredients.Length; i++)
+            {
+                Destroy(ingredients[i]);
+            }
+            RepopSpawnLocs();
+            RandomSpawn();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RepopSpawnLocs(); //Fill our list with our locations
+            RandomSpawn(); //Spawn objects and delete each location from the list  
+        }
+
+
+
         //if statement to identify which of the ingredients is being removed to then set eg. object1Renderer.sprite = spriteArray[13] which will set the sprite to clear
         object1Renderer.sprite = spriteArray[ing1];
         object2Renderer.sprite = spriteArray[ing2];
@@ -146,29 +165,14 @@ public class GameManager : MonoBehaviour
         }
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            GameObject[] ingredients = GameObject.FindGameObjectsWithTag("Ingredient");
-            for (int i = 0; i < ingredients.Length; i++)
-            {
-                Destroy(ingredients[i]);
-            }
-            RepopSpawnLocs();
-            RandomSpawn();
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
         scoreText.text = "Score: " + score.ToString();
-
         timerText.text = "Time: " + timer.ToString("0.00");
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            RepopSpawnLocs(); //Fill our list with our locations
-            RandomSpawn(); //Spawn objects and delete each location from the list  
-        }
         timer = timer - Time.deltaTime;
         if (timer < 0)
         {
