@@ -62,6 +62,9 @@ public class GameManager : MonoBehaviour
         object2Renderer = GameObject.Find("Ingredient Space 2").GetComponent<SpriteRenderer>();
         object3Renderer = GameObject.Find("Ingredient Space 3").GetComponent<SpriteRenderer>();
         object4Renderer = GameObject.Find("Ingredient Space 4").GetComponent<SpriteRenderer>();
+
+        RepopSpawnLocs();
+        RandomSpawn();
     }
 
     void CreateRecipe()
