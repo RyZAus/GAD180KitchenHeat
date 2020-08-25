@@ -12,7 +12,6 @@ public class PickUpBehaviour : MonoBehaviour
     public float throwforce;
     public LayerMask notgrabbed;
     
-    
     void Update()
     {     
         if (Input.GetKeyDown(KeyCode.D))
@@ -43,9 +42,7 @@ public class PickUpBehaviour : MonoBehaviour
                 if (hit.collider != null && hit.collider.tag == "Ingredient")
                 {
                     grabbed = true;
-                    //switch character animation to carry position
-                    animator.SetTrigger("Carry");
-
+                    animator.SetTrigger("Carry");            
                 }
 
 
@@ -68,7 +65,11 @@ public class PickUpBehaviour : MonoBehaviour
         }
         //if an item is grabbed, move it to the holding position
         if (grabbed)
+        {
             hit.collider.gameObject.transform.position = holdpoint.position;
+            
+
+        }
 
 
     }

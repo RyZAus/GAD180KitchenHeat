@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         //DEVELOPER TOOLS TO REMOVE LATER
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -145,7 +146,7 @@ public class GameManager : MonoBehaviour
             RepopSpawnLocs(); //Fill our list with our locations
             RandomSpawn(); //Spawn objects and delete each location from the list  
         }
-
+        */
 
 
         //if statement to identify which of the ingredients is being removed to then set eg. object1Renderer.sprite = spriteArray[13] which will set the sprite to clear
